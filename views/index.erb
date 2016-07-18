@@ -6,8 +6,9 @@
       <%= product.title %> <br/>
       <img src= "<%= product.path_to_image %>" alt="HTML5 Icon" class="img-rounded" width="240"/> <br />
       <%= product.description %> <br/>
-      <%= product.title %> <br/>
-      <%= product.description %>
+      Size: <%= product.size %> cm <br/>
+      Price: <%= product.price %> UAH <br/>
+      <button class="btn btn-sm btn-success" onclick="add_to_cart(<%= product.id %>)" >Add to cart</button>
     </div>
     <% count += 1 %>
   <% end %>
