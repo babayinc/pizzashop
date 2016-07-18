@@ -8,5 +8,4 @@ function something()
 	window.localStorage.setItem('aaa', x);
 
 	alert(x)
-
 }

@@ -1,17 +1,16 @@
 <h2>Welocome to Pizza Shop</h2>
 <% count = 0%>
 <div class="row">
-<% @products.each do |product| %>
-  <% if count % 2 == 0 %>
+  <% @products.each do |product| %>
+    <div class="col-md-4">
+      <%= product.title %> <br/>
+      <img src= "<%= product.path_to_image %>" alt="HTML5 Icon" class="img-rounded" width="240"/> <br />
+      <%= product.description %> <br/>
+      <%= product.title %> <br/>
+      <%= product.description %>
     </div>
-    <div class="row">
+    <% count += 1 %>
   <% end %>
-  <div class="col-md-6">
-    <img src= "<%= product.path_to_image %>" alt="HTML5 Icon" class="img-rounded" width="240"> <br />
-    <%= product.title %>
-  </div>
-  <% count += 1 %>
-<% end %>
 </div> <br />
 
 <button class="btn btn-primary" onclick="something()" >Click me!</button>
