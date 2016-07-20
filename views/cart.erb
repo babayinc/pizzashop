@@ -1,0 +1,22 @@
+<h2>Cart</h2>
+<div class="row">
+  <% @orders.each do |key, value| %>
+    <div class="col-md-8"><%= key %></div>
+    <div class="col-md-4"><%= value %></div>
+  <% end %>
+</div>
+<br />
+<form action="/order" method="post">
+  <p>
+    <input id="orders_input" name="orders[username]" type="text" class="form-control" placeholder="Enter your name" />
+  </p>
+  <p>
+    <input id="orders_input" name="orders[phone]" type="text" class="form-control" placeholder="Enter your phone" />
+  </p>
+  <p>
+    <input id="orders_input" name="orders[address]" type="text" class="form-control" placeholder="Enter your address" />
+  </p>
+  <p>
+    <input id="Confirm" type="submit" class="btn btn-primary" value = "Confirm" />
+  </p>
+</form>
